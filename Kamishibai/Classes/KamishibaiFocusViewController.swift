@@ -18,7 +18,7 @@ public enum FocusAccesoryViewPosition {
 public class KamishibaiFocusViewController: UIViewController {
 
     // MARK: Properties
-    let focusView = KamishibaiFocusView(frame: CGRect.zero)
+    public let focusView = KamishibaiFocusView(frame: CGRect.zero)
     var customViews = [UIView]()
     let transitioning = KamishibaiFocusTransitioning(state: .presenting)
     weak var kamishibai: Kamishibai?
@@ -58,7 +58,7 @@ public class KamishibaiFocusViewController: UIViewController {
         }
 
         if self.view.superview == nil {
-            present(onView: targetView, completion: { 
+            present(onView: targetView, completion: {
                 focusBlock()
             })
         } else {
@@ -212,3 +212,4 @@ class KamishibaiFocusTransitioning: NSObject, UIViewControllerAnimatedTransition
         }
     }
 }
+

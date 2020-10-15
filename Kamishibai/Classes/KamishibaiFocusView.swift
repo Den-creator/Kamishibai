@@ -15,7 +15,7 @@ public class KamishibaiFocusView: UIView {
     public var animationDuration: TimeInterval = 0.5
     var maskLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
-        layer.fillRule = kCAFillRuleEvenOdd
+        layer.fillRule = CAShapeLayerFillRule.evenOdd
         layer.fillColor = UIColor.black.cgColor
         return layer
     }()
@@ -108,7 +108,7 @@ public class KamishibaiFocusView: UIView {
         }
         animation.toValue = to
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         return animation
     }
 
@@ -121,7 +121,7 @@ public class KamishibaiFocusView: UIView {
         }
         animation.toValue = endPath.cgPath
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         return animation
     }
 }
@@ -187,3 +187,4 @@ public struct Focus {
         }
     }
 }
+

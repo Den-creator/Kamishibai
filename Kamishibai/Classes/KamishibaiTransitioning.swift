@@ -137,7 +137,7 @@ extension KamishibaiTransitioning: UINavigationControllerDelegate {
         return originalNavigationDelegate?.navigationController?(navigationController, interactionControllerFor:animationController)
     }
 
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return originalNavigationDelegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
 
@@ -146,4 +146,5 @@ extension KamishibaiTransitioning: UINavigationControllerDelegate {
         originalNavigationDelegate = nil
     }
 }
+
 
